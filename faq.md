@@ -210,10 +210,10 @@ composer config -g repo.packagist composer https://packagist.phpcomposer.com
 打开命令行窗口，进入你的项目的根目录（也就是 composer.json 文件所在目录），执行如下命令：
 
 ```
-composer config repo.packagist composer https://packagist.phpcomposer.com
+composer config repo.packagist composer https://packagist.laravel-china.org
 ```
 
-感谢：https://pkg.phpcomposer.com/
+感谢：https://packagist.laravel-china.org
 
 
 ## 如何修改或禁用左侧菜单栏的角标
@@ -278,10 +278,10 @@ top.window.Backend.api.sidebar({
 
 ![](https://cdn.forum.fastadmin.net/uploads/201706/02/0f650de53f0ee93ddfd658f731027d43)
 
-准备工作：首先确保你的FA开启了调试模式`application/config.php`中的`app_debug`置为`true`
+准备工作：首先确保你的FastAdmin开启了调试模式`application/config.php`中的`app_debug`置为`true`
 两种定位错误的方法：
 
-1. 使用Chrome浏览器，打开开发者工具，选中Network(网络)选项卡,刷新一下页面或重新请求一次，定位到我们请求的URL，点击然后在Preview即可看到错误信息
+1. 使用Chrome浏览器，打开开发者工具，选中`Network(网络)`选项卡,刷新一下页面或重新请求一次，定位到我们请求的URL，点击然后在`Preview`即可看到错误信息
 2. 直接查看`runtime/log`目录下的错误日志
 
 修复错误后再重试即可
@@ -313,7 +313,8 @@ FastAdmin建议运行在PHP5.5及以上版本，因此如果提示网络错误�
    open_basedir=/yourpath/fastadmin/:/tmp/:/proc/
    ```
 
-   ​
+3. 如果使用的是`宝塔面板`，请直接在`网站`->`配置`->`网站目录`中修改`运行目录`为`public`目录
+​
 
 ## 如何将静态资源采用CDN方式部署到第三方云存储
 
