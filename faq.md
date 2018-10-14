@@ -202,7 +202,7 @@ server {
 打开命令行窗口并执行如下命令：
 
 ```
-composer config -g repo.packagist composer https://packagist.phpcomposer.com
+composer config -g repo.packagist composer https://packagist.laravel-china.org
 ```
 
 **#### 方法二： 修改当前项目的 composer.json 配置文件：**
