@@ -127,7 +127,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
 我们可以看到该模块第一行为`RequireJS`标准语法，意思是此模块依赖`'jquery', 'bootstrap', 'backend', 'table', 'form'`几个模块，同时将它们加载为`$, undefined, Backend, Table, Form`这几个对应，我们就可以放心大胆在其中使用这几个对象了。
 
-其中有定义一个`Controller` 对象，它有`index/add/ediit/api`四个方法，这四个方法分别与我们控制器中的方法一一对应。
+其中有定义一个`Controller` 对象，它有`index/add/edit/api`四个方法，这四个方法分别与我们控制器中的方法一一对应。
 
 ## 工具模块
 
