@@ -11,7 +11,7 @@ order: 7
 
 | 类型        | 备注   | 类型说明                            |
 | --------- | ---- | ------------------------------- |
-| int       | 整形   | 自动生成type为number的文本框，步长为1        |
+| int       | 整型   | 自动生成type为number的文本框，步长为1        |
 | enum      | 枚举型  | 自动生成单选下拉列表框                     |
 | set       | set型 | 自动生成多选下拉列表框                     |
 | float     | 浮点型  | 自动生成type为number的文本框，步长根据小数点位数生成 |
@@ -49,7 +49,7 @@ order: 7
 | list     | timelist    | set         | 识别为列表字段，自动生成多选下拉列表               |
 | data     | hobbydata   | enum        | 识别为选项字段，自动生成单选框                     |
 | data     | hobbydata   | set         | 识别为选项字段，自动生成复选框                     |
-
+| switch   | siteswitch  | tinyint     | 识别为开关字段，自动生成开关组件                   |
 
 >  温馨提示：以list或data结尾的字段必须搭配enum或set类型才起作用 
 
