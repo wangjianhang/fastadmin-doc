@@ -123,18 +123,20 @@ Selectpage所支持的扩展属性
 
 ## 富文本编辑器
 
-FastAdmin的富文本编辑器只需要给对应的textarea增加一个class为`editor`即可，FastAdmin在渲染时即会将textarea渲染为富文本编辑器，目前支持`summernote`、`wangeditor`和`ueditor`富文本编辑器，需安装对应的插件即可正常使用。
+FastAdmin的富文本编辑器只需要给对应的textarea增加一个class为`editor`即可，FastAdmin在渲染时即会将textarea渲染为富文本编辑器，目前支持`summernote`、`wangeditor`和`ueditor`等富文本编辑器，需安装对应的插件即可正常使用。
 
 | 插件       | 特点                                               | 插件下载                                                |
 | ---------- | -------------------------------------------------- | ------------------------------------------------------- |
 | Summernote | 操作简单、易用、图片直传第三方存储                 | [下载](https://www.fastadmin.net/store/summernote.html) |
+| Nkeditor | 基于Kindeditor、多主题、简洁强大、图片直传第三方存储               | [下载](https://www.fastadmin.net/store/nkeditor.html) |
 | Wangeditor | 轻量、简洁、易用、图片直传第三方存储               | [下载](https://www.fastadmin.net/store/wangeditor.html) |
 | Simeditor  | 漂亮、简单、功能简单、图片直传第三方存储           | [下载](https://www.fastadmin.net/store/simeditor.html)  |
 | Umeditor   | 百度出品、简单、易用、支持公式、图片直传第三方存储 | [下载](https://www.fastadmin.net/store/umeditor.html)   |
-| Ueditor    | 百度出品、复杂、功能全、图片不能直传第三方存储     | [下载](https://www.fastadmin.net/store/ueditor.html)    |
+| Ueditor    | 百度出品、功能全、图片直传第三方存储     | [下载](https://www.fastadmin.net/store/ueditor.html)    |
 
 > 如果是自定义表单,例如在index页面,切记使用`Form.api.bindevent`绑定事件才会生效,否则单独添加个`editor`是不会生效的
 > 在安装完对应的富文本插件后切记启用、刷新插件缓存并清除浏览器缓存后才生效。
+> 请务必同时只启用一个富文本编辑器，如果需要不同的页面展示不同的编辑器，需要修改编辑器插件代码，修改对应的选择器，将`editor`改成自定义的class
 
 ## 表单验证
 
