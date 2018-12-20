@@ -1,10 +1,5 @@
----
-title: 介绍
-type: docs
-order: 1
----
-
 FastAdmin是一款基于ThinkPHP5+Bootstrap的极速后台开发框架。
+
 
 ## **主要特性**
 
@@ -29,55 +24,60 @@ FastAdmin是一款基于ThinkPHP5+Bootstrap的极速后台开发框架。
 * 二级域名部署支持，同时域名支持绑定到插件
 * 多语言支持，服务端及客户端支持
 * 强大的第三方模块支持([CMS](https://www.fastadmin.net/store/cms.html)、[博客](https://www.fastadmin.net/store/blog.html)、[文档生成](https://www.fastadmin.net/store/docs.html)、[个人免签支付](https://www.fastadmin.net/store/pay.html))
-* 整合第三方短信接口(阿里云、创蓝短信)
+* 整合第三方短信接口(阿里云、腾讯云短信)
 * 无缝整合第三方云存储(七牛、阿里云OSS、又拍云)功能
+* 第三方富文本编辑器支持(Summernote、Tinymce、百度编辑器)
 * 第三方登录(QQ、微信、微博)整合
 * Ucenter整合第三方应用
+
+## **安装使用**
+
+https://doc.fastadmin.net
 
 ## **在线演示**
 
 https://demo.fastadmin.net
 
 用户名：admin
+
 密　码：123456
-提　示：演示站数据无法进行删除和修改，只能新增，完整体验请下载源码安装体验
+
+提　示：演示站数据无法进行修改，请下载源码安装体验全部功能
 
 ## **界面截图**
-![控制台](https://wx2.sinaimg.cn/large/718e40a3gy1ff9k65lrumj21400pdjvk.jpg)
+![控制台](https://gitee.com/uploads/images/2017/0411/113717_e99ff3e7_10933.png "控制台")
 
 ## **问题反馈**
 
-在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+在使用中有任何问题，请使用以下联系方式联系我们
 
 交流社区: https://forum.fastadmin.net
 
-QQ群：[636393962](https://jq.qq.com/?_wv=1027&k=487PNBb)
+QQ群: [636393962](https://jq.qq.com/?_wv=1027&k=487PNBb)(满) [708784003](https://jq.qq.com/?_wv=1027&k=5ObjtwM)(满) [964776039](https://jq.qq.com/?_wv=1027&k=59qjU2P)(3群)
 
 Email: (karsonzhang#163.com, 把#换成@)
 
-weibo: @karsonzhang
-
 Github: https://github.com/karsonzhang/fastadmin
 
-Git@OSC: https://gitee.com/karson/fastadmin
+Gitee: https://gitee.com/karson/fastadmin
 
 ## **特别鸣谢**
 
 感谢以下的项目,排名不分先后
 
-ThinkPHP：[http://www.thinkphp.cn](http://www.thinkphp.cn/)
+ThinkPHP：http://www.thinkphp.cn
 
-AdminLTE：[https://adminlte.io](https://adminlte.io/)
+AdminLTE：https://adminlte.io
 
-Bootstrap：[http://getbootstrap.com](http://getbootstrap.com/)
+Bootstrap：http://getbootstrap.com
 
-jQuery：[http://jquery.com](http://jquery.com/)
+jQuery：http://jquery.com
 
-Bootstrap-table：<https://github.com/wenzhixin/bootstrap-table>
+Bootstrap-table：https://github.com/wenzhixin/bootstrap-table
 
-Nice-validator: [https://validator.niceue.com](https://validator.niceue.com/)
+Nice-validator: https://validator.niceue.com
 
-SelectPage: <https://github.com/TerryZ/SelectPage>
+SelectPage: https://github.com/TerryZ/SelectPage
 
 
 ## **版权信息**

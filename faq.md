@@ -6,6 +6,14 @@ order: 12
 
 如果你在使用FastAdmin的过程中发现任何问题,请到交流社区发贴: https://forum.fastadmin.net
 
+## 在FastAdmin中如何开启调试模式？
+
+开启调试模式的方法有两种：
+
+1、打开`application/config.php`，找到`app_debug`,将它的值置为`true`即可
+
+2、如果你有启用`.env`环境配置，修改其中`app_debug`的值为`true`即可。
+
 ## 为什么在调试模式下功能正常，但在生产环境下功能失效
 
 如果你有修改了框架核心的JS文件或者修改了核心样式文件，需要使用命令重新压缩打包JS和CSS后才会在生产环境下生效，具体请参考：https://doc.fastadmin.net/docs/command.html#一键压缩打包-3 
@@ -95,6 +103,13 @@ FastAdmin的数据库安装文件保存在 [application/admin/command/Install/fa
 
 3. 最后修改`application/admin/views/index/index.html`中第6行，将`skin-green`换成你需要的颜色标识
 4. 注意生产环境还需要执行`php think min -m all -r all`才会生效
+
+## 为什么前台自己创建的控制器提示你没有权限访问
+
+这是由于控制器的基类你肯定继承的是`Frontend`，`Frontend`基类有鉴权判断，有以下两种办法可以尝试
+
+1. 添加控制器的属性`$noNeedRight=["*"]`，表示无需再做鉴权
+2. 后台会员规则中添加相应的规则，再给对应的会员组赋予相应的权限即可
 
 ## php think install报不是内部或外部命令
 
@@ -256,6 +271,10 @@ top.window.Backend.api.sidebar({
 	'auth/admin':0
 });
 ```
+
+## 后台上传文件时提示HTTP Error.(code:-200)错误
+
+在后台上传文件时如果遇到-200错误，首先请开启调试模式，然后请使用谷歌浏览器的开发者工具，按F12，切换到`Network`，看具体的错误信息。
 
 ## 在Windows下如何压缩打包JS和CSS
 

@@ -172,6 +172,7 @@ Form.events.validator(form, success, error, submit)
 
 ```js
 Form.api.bindevent($("form[role=form]"), function(data, ret){
+    //如果我们需要在提交表单成功后做跳转，可以在此使用location.href="链接";进行跳转
 	Toastr.success("成功");
 }, function(data, ret){
   	Toastr.success("失败");

@@ -206,17 +206,17 @@ $("#city-picker").on("cp:updated", function() {
 
 同时我们还可以通过配置以下属性来自定义我们日期选择器的功能
 
-| 属性                | 描述                                                         | 示例                                 |
-| ------------------- | ------------------------------------------------------------ | ------------------------------------ |
-| data-format         | 日期时间的格式，支持[Moment.js](https://momentjs.com/docs/#/displaying/format/)的格式 | data-format=" YYYY-MM-DD"            |
-| data-min-date       | 最小可选择的日期                                             | date-min-date="2011-10-01"           |
-| data-max-date       | 最大可选择的日期                                             | date-max-date="2046-10-01"           |
-| data-use-current    | 使用当前的日期时间                                           | data-use-current="true"              |
-| data-default-date   | 默认日期                                                     | data-default-date="2011-10-01"       |
-| data-disabled-dates | 禁用的日期组                                                 | data-disabled-dates="['2011-10-01']" |
-| data-enabled-dates  | 可用的日期组                                                 | data-enabled-dates="['2011-10-01']"  |
-| data-use-strict     | 使用严格的日期时间,错误日期将被忽略                          | data-use-strict="true"               |
-| data-side-by-side   | 日期时间并排显示                                             | data-side-by-side="true"             |
+| 属性                     | 描述                                                         | 示例                                      |
+| ------------------------ | ------------------------------------------------------------ | ----------------------------------------- |
+| data-date-format         | 日期时间的格式，支持[Moment.js](https://momentjs.com/docs/#/displaying/format/)的格式 | data-date-format=" YYYY-MM-DD"            |
+| data-date-min-date       | 最小可选择的日期                                             | data-date-min-date="2011-10-01"           |
+| data-date-max-date       | 最大可选择的日期                                             | data-date-max-date="2046-10-01"           |
+| data-date-use-current    | 使用当前的日期时间                                           | data-date-use-current="true"              |
+| data-date-default-date   | 默认日期                                                     | data-date-default-date="2011-10-01"       |
+| data-date-disabled-dates | 禁用的日期组                                                 | data-date-disabled-dates='["2011-10-02"]' |
+| data-date-enabled-dates  | 可用的日期组                                                 | data-date-enabled-dates='["2011-10-02"]'  |
+| data-date-use-strict     | 使用严格的日期时间,错误日期将被忽略                          | data-date-use-strict="true"               |
+| data-date-side-by-side   | 日期时间并排显示                                             | data-date-side-by-side="true"             |
 
 > 更多的使用方法请参考[Bootstrap-datetimepicker官方教程](https://eonasdan.github.io/bootstrap-datetimepicker/)
 
