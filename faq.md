@@ -32,6 +32,10 @@ FastAdmin从`1.0.0.20180513_beta`版本开始新增了二级菜单功能，开�
 
 FastAdmin中的后台登录验证功能默认是关闭的，如果需要启用请修改`application/config.php`文件最下方的`login_captcha`，修改为`true`即可。
 
+## 如何在生成CRUD时生成回收站功能
+
+FastAdmin从`1.0.0.20190301_beta`版本开始已经支持自动生成回收站功能，如果需要生成回收站功能，请确保你的FastAdmin版本，其次确保你的数据表中存在`deletetime`这个字段，只需保证存在此字段，CRUD在生成时会自动生成回收站相关的前后端代码和文件。
+
 ## 如何在控制器或模型中获取当前登录的管理员或登录用户信息
 
 在FastAdmin所提供的基类`Frontend`、`Backend`、`Api`中都有提供获取当前管理员或登录用户的信息方法
@@ -203,7 +207,6 @@ server {
 
 如果你使用的是 lnmp.org 的一键安装LNMP环境，
 请查阅 https://lnmp.org/faq/lnmp-vhost-add-howto.html#rewrite 的伪静态配置
-
 
 ## composer install时无法下载package
 
