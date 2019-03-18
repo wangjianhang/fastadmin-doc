@@ -368,7 +368,7 @@ protected $noNeedLogin = ['mywork'];
 比如我们有定义一个方法`mytest`，而这个方法是需要登录后任何管理员都可以访问，则我们需要在当前的控制器定义
 
 ```php
-prtected $noNeedRight = ['mytest'];
+protected $noNeedRight = ['mytest'];
 ```
 
 如果我们需要动态定义，请务必放在调用父类的`_initialize`方法之前，否则是不会生效的。
