@@ -310,9 +310,3 @@ $(document).on("fa.event.appendfieldlist", 'data-name="row[test]"', function(){
 </a>
 ```
 
-| 属性          | 介绍            | 示例     |
-| ------------- | --------------- | -------- |
-| data-input-id | 隐藏域input的ID | switcher |
-| data-yes      | 开启状态的值    | 1        |
-| data-no       | 关闭状态的值    | 0        |
-
