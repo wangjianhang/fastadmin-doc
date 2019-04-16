@@ -79,6 +79,7 @@ php think crud -t test --relation=category --relation=admin --relationforeignkey
 2. FastAdmin自带一个`fa_test`表用于测试CRUD能支持的字段名称和类型，请直接使用`php think crud -t test`生成查看
 3. 生成CRUD后，关联表外键在列表未显示对应的关联表数据信息，此时建议你使用在线命令行插件进行可视化生成
 4. 生成CRUD后，在添加或编辑时外键字段未能正确显示关联表数据列表，请查看数据库章节常见问题中的说明。
+5. 如果需要生成回收站，请务必保证你的表中存在`deletetime`字段，且默认值为null，这样在一键CRUD时将自动生成回收站的功能。
 
 ### 使用范例
 

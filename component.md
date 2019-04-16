@@ -18,6 +18,8 @@ FastAdmin默认集成了多个第三方组合，如表单验证、文件上传�
 | 下拉列表     | Form.events.selectpicker($("form"));   | 渲染并绑定form中的Selectpicker组件 |
 | 附件选择     | Form.events.faselect($("form"));       | 渲染并绑定form中的选择附件组件     |
 | 键值配置     | Form.events.fieldlist($("form"));      | 渲染并绑定form中的选择键值配置组件 |
+| 开关组件     | Form.events.switcher($("form"));       | 渲染并绑定form中的开关组件         |
+| 滑块组件     | Form.events.slider($("form"));         | 渲染并绑定form中的滑块组件         |
 
 ## 文件上传
 
@@ -118,6 +120,14 @@ Selectpage所支持的扩展属性
 > Selectpage的`data-params`支持`function`类型,如果需要动态传参(例如联动查询),则可以在JS中将`data-params`添加一个function处理即可
 > FastAdmin在生成CRUD时会对包含下划线的字段默认生成动态下拉列表，比如`user_id`将自动生成`data-source="user/index"`
 > 默认读取的是`id`和`name`字段，如果需要修改，请参考上方的参数修改方法。
+>
+> data-params自定义扩展参数支持使用function动态返回数据，请在表单初始化之前使用，例如传递动态选择的类型
+>
+> ```
+> $("#c-name").data("params", function (obj) {
+>     return {custom: {type: $("#c-type").val()}};
+> });
+> ```
 
 更多的使用方法请参考[Selectpage官方教程](https://terryz.github.io/)
 
@@ -236,4 +246,71 @@ $("#city-picker").on("cp:updated", function() {
 | data-style       | 定义样式           | select           | data-style="btn-primary"       |
 
 > 更多的使用方法请参考：[Selectpicker官方教程](https://silviomoreto.github.io/bootstrap-select/)
+
+## 键值组件
+
+键值组件是FastAdmin开发的一项简洁实用的基础组件，在FastAdmin中很多模块都有使用到该组件，例如常规管理->系统配置->字典配置均使用此组件开发，我们在插件管理配置中也经常可以看到键值组件的身影。
+
+以下是键值组件最常用的使用方法：
+```
+<dl class="fieldlist" data-name="row[configgroup]">
+    <dd>
+        <ins>键名</ins>
+        <ins>键值</ins>
+    </dd>
+    <dd>
+    		<a href="javascript:;" class="btn btn-sm btn-success btn-append"><i class="fa fa-plus"></i> 追加</a>
+    </dd>
+    <textarea name="row[configgroup]" class="form-control hide" cols="30" rows="5">{"basic":"基础配置","email":"邮件配置","dictionary":"字典配置","user":"会员配置","example":"示例分组"}</textarea>
+</dl>
+```
+通过将以上代码放置在我们的表单中，然后使用`Form.api.bindevent("form")`或`Form.events.fieldlist("form")`进行初始化即可。
+
+以上是最简洁的使用方法，fieldlist还有更强大的自定义功能，如下：
+```
+<dl class="fieldlist" data-name="row[test]" data-template="testtpl">
+    <dd>
+        <ins>姓名</ins>
+        <ins>性别</ins>
+        <ins>年龄</ins>
+        <ins>成绩</ins>
+    </dd>
+    <dd>
+    		<a href="javascript:;" class="btn btn-sm btn-success btn-append"><i class="fa fa-plus"></i> 追加</a>
+    </dd>
+    <textarea name="row[test]" class="form-control hide" cols="30" rows="5">[{"name":"张三"},{"gender":"男"},{"age":"23"},{"score":"80"}]</textarea>
+</dl>
+<!--定义模板-->
+<script type="text/javascript" id="testtpl">
+		<dd class="form-inline">
+				<input type="text" name="row[<%=name%>][<%=index%>][name]" class="form-control" value="<%=row['name']%>" size="10"> 
+				<input type="text" name="row[<%=name%>][<%=index%>][gender]" class="form-control" value="<%=row['gender']%>" size="30"> 
+				<input type="text" name="row[<%=name%>][<%=index%>][age]" class="form-control" value="<%=row['age']%>" size="30"> 
+				<input type="text" name="row[<%=name%>][<%=index%>][score]" class="form-control" value="<%=row['score']%>" size="30"> 
+				<span class="btn btn-sm btn-danger btn-remove"><i class="fa fa-times"></i></span> <span class="btn btn-sm btn-primary btn-dragsort"><i class="fa fa-arrows"></i></span>
+    </dd>
+</script>
+```
+通过以上定义，可以任意自定义我们展示项的数据。
+> 如果我们需要在点击追加按钮以后再对新增的展示项绑定事件，我们可以在JS中通过监听事件来给新增的元素绑定事件
+> ```
+$(document).on("fa.event.appendfieldlist", 'data-name="row[test]"', function(){
+  Form.api.bindevent(this);
+});
+> ```
+
+## 开关组件
+
+开关组件常用于状态值的变更或只有两个值的切换。使用开关组件只需要给我们的操作按钮添加`data-toggle="switcher"`即可，如下：
+```
+<input  id="c-switch" name="row[switch]" type="hidden" value="0">
+<a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-switch" data-yes="1" data-no="0" >
+<i class="fa fa-toggle-on text-success {eq name="$row.switch" value="0"}fa-flip-horizontal text-gray{/eq} fa-2x"></i>
+</a>
+```
+| 属性               | 介绍             | 示例                             |
+| ---------------- | -------------- | ------------------------------ |
+| data-input-id | 隐藏域input的ID       | switcher        |
+| data-yes      | 开启状态的值       | 1 |
+| data-no | 关闭状态的值 | 0           |
 

@@ -6,6 +6,7 @@ order: 4
 在FastAdmin中可收自由扩展和开发插件，这里简单整理一个插件文档。在此以[官方博客插件](https://www.fastadmin.net/store/blog.html) 为示例来介绍，因为官方博客插件是前后台都有的一套完整方案。
 
 ## 目录结构
+
 ```
 blog
 ├── application
@@ -150,7 +151,20 @@ return [
         'msg'     => '验证失败提示文字',
         'tip'     => '字段填写帮助',
         'ok'      => '验证成功提示文字'
-    ]
+    ],
+    [
+        'name'    => '__tips__',
+        'title'   => '温馨提示',
+        'type'    => 'string',
+        'content' =>
+            array(),
+        'value'   => '该提示将出现的插件配置头部，通常用于提示和说明',
+        'rule'    => '',
+        'msg'     => '',
+        'tip'     => '',
+        'ok'      => '',
+        'extend'  => '',
+    ],
 ];
 ```
 
@@ -167,6 +181,8 @@ website = https://www.fastadmin.net
 version = 1.0.0
 state = 1
 ```
+
+注意这个`name`是插件的唯一标识，不能和现在的插件冲突，其次注意下这个`name`值，如果我们有涉及到数据库，那个表的前缀也必须是`__PREFIX__name`开头。比如我们下面的`__PREFIX__blog_category`。
 
 `install.sql` 这个文件中只能是SQL语句，同时在此文件中可以使用`__PREFIX__`表示数据库表前缀，FastAdmin在安装导入SQL时自动进行替换。此文件的内容格式为
 
@@ -237,5 +253,5 @@ FastAdmin插件分为在线安装和命令行安装，在线安装可以直接�
 
 目前FastAdmin官方已经上线插件市场，开发者可以在插件市场下载插件进行离线安装，地址：https://www.fastadmin.net/store.html
 
-如果你开发了一款插件需要上架到FastAdmin的插件市场，可以通过在线发布插件的形式分享或售卖你的插件，请点击https://www.fastadmin.net/postaddon.html 查看
+如果你开发了一款插件需要上架到FastAdmin的插件市场，可以通过在线发布插件的形式分享或出售你的插件或应用，请点击https://www.fastadmin.net/postaddon.html 查看
 
