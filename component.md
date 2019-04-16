@@ -17,7 +17,7 @@ FastAdmin默认集成了多个第三方组合，如表单验证、文件上传�
 | 日期时间     | Form.events.datetimepicker($("form")); | 渲染并绑定form中的日期时间组件     |
 | 下拉列表     | Form.events.selectpicker($("form"));   | 渲染并绑定form中的Selectpicker组件 |
 | 附件选择     | Form.events.faselect($("form"));       | 渲染并绑定form中的选择附件组件     |
-| 键值配置     | Form.events.fieldlist($("form"));      | 渲染并绑定form中的选择键值配置组件 |
+| 键值组件     | Form.events.fieldlist($("form"));      | 渲染并绑定form中的键值组件         |
 | 开关组件     | Form.events.switcher($("form"));       | 渲染并绑定form中的开关组件         |
 | 滑块组件     | Form.events.slider($("form"));         | 渲染并绑定form中的滑块组件         |
 
@@ -89,10 +89,11 @@ FastAdmin的上传功能非常强大，我们只需要简单的配置即可支�
 
 如果我们想直接通过JS上传一个文件到我们的服务器，我们可以使用`Upload.api.send(file, success, failure, complete)`来上传文件。
 
-## 动态下拉列表
+## 动态下拉列表(SelectPage)
 
 FastAdmin中的动态下拉列表使用的是优秀强大的`Selectpage`插件来支持，FastAdmin对其进行了二次开发。
 下面介绍一个最基础的动态下拉列表示例，如下
+
 ```html
 <input id="c-name" data-rule="required" data-source="category/selectpage" class="form-control selectpage" name="row[name]" type="text" value="">
 ```
@@ -308,9 +309,10 @@ $(document).on("fa.event.appendfieldlist", 'data-name="row[test]"', function(){
 <i class="fa fa-toggle-on text-success {eq name="$row.switch" value="0"}fa-flip-horizontal text-gray{/eq} fa-2x"></i>
 </a>
 ```
-| 属性               | 介绍             | 示例                             |
-| ---------------- | -------------- | ------------------------------ |
-| data-input-id | 隐藏域input的ID       | switcher        |
-| data-yes      | 开启状态的值       | 1 |
-| data-no | 关闭状态的值 | 0           |
+
+| 属性          | 介绍            | 示例     |
+| ------------- | --------------- | -------- |
+| data-input-id | 隐藏域input的ID | switcher |
+| data-yes      | 开启状态的值    | 1        |
+| data-no       | 关闭状态的值    | 0        |
 
