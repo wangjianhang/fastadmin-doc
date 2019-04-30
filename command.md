@@ -83,7 +83,7 @@ php think crud -t test --relation=category --relation=admin --relationforeignkey
 
 ### 使用范例
 
-![示例](https://wx1.sinaimg.cn/large/718e40a3gy1ff9k71b51yg20th0lje82.gif)
+![示例](https://gitee.com/uploads/images/2019/0430/000241_a1d306fe_10933.gif)
 
 更多CRUD一键生成可使用的参数请使用`php think crud --help`查看
 
@@ -120,7 +120,7 @@ php think menu -c all-controller
 
 ### 使用范例
 
-![示例](https://wx2.sinaimg.cn/large/718e40a3gy1ff9k644sesg20tl0lehdw.gif)
+![示例](https://gitee.com/uploads/images/2019/0430/090621_d29f83aa_10933.gif)
 
 更多CRUD一键生成可使用的参数请使用`php think menu --help`查看
 
@@ -165,7 +165,7 @@ Windows系统需要手动配置node的路径,请参考[在Windows下如何压缩
 
 JS和CSS文件压缩前和压缩后浏览器请求对比(请右键查看大图)：
 
-![JS和CSS文件压缩前和压缩后浏览器请求对比](https://wx2.sinaimg.cn/large/718e40a3gy1ffjoe5t6dej21e010h7lu.jpg)
+![JS和CSS文件压缩前和压缩后浏览器请求对比](https://gitee.com/uploads/images/2019/0429/235045_39609154_10933.jpeg)
 
 更多一键生成JS和CSS的参数请使用`php think min --help`查看
 

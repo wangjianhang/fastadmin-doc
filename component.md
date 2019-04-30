@@ -134,7 +134,7 @@ Selectpage所支持的扩展属性
 
 ## 富文本编辑器
 
-FastAdmin的富文本编辑器只需要给对应的textarea增加一个class为`editor`即可，FastAdmin在渲染时即会将textarea渲染为富文本编辑器，目前支持`summernote`、`wangeditor`和`ueditor`等富文本编辑器，需安装对应的插件即可正常使用。
+FastAdmin的富文本编辑器只需要给对应的textarea增加一个class为`editor`即可，FastAdmin在渲染时即会将textarea渲染为富文本编辑器，目前支持`summernote`、`nkeditor`和`ueditor`等富文本编辑器，需安装对应的插件即可正常使用。
 
 | 插件       | 特点                                               | 插件下载                                                |
 | ---------- | -------------------------------------------------- | ------------------------------------------------------- |
@@ -178,6 +178,8 @@ FastAdmin的表单验证采用的是`Nice-validator`验证插件，`Nice-validat
 | username    | 必须为3-12位数字、字母、下划线     | username                                 |
 | password    | 必须为6-16位字符，不能有空格      | password                                 |
 
+> 如果你的表单不希望使用`nice-validator`组件进行验证，可以给`form`添加一个`novalidate`属性即可
+>
 > 更多的使用方法请参考[Nice-validator官方教程](https://validator.niceue.com/docs/)
 
 ## 城市选择
