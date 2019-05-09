@@ -228,6 +228,7 @@ php think api -h
 | @ApiSector   | API分组名称                            | (测试分组)  |
 | @ApiRoute    | API接口URL，此@ApiRoute只是基础URL     | (/api/test) |
 | @ApiInternal | 忽略的控制器,表示此控制将不加入API文档 | 无          |
+| @ApiWeigh    | API方法的排序,值越大越靠前           | (99)        |
 
 控制器方法注释
 
@@ -244,6 +245,7 @@ php think api -h
 | @ApiReturnParams  | API返回的结果参数介绍                                      | (name="code", type="integer", required=true, sample="0")     |
 | @ApiReturnHeaders | API返回的Headers信息                                       | (name="token", type="integer", required=true, sample="123456") |
 | @ApiInternal      | 忽略的方法,表示此方法将不加入文档                          | 无                                                           |
+| @ApiWeigh         | API方法的排序,值越大越靠前                          | (99)                                                           |
 
 ### 标准范例
 
