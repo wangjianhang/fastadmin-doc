@@ -40,6 +40,8 @@ php think crud -t test --setcheckboxsuffix=list --setcheckboxsuffix=data
 php think crud -t test --imagefield=image --imagefield=img
 //关联多个表,参数传递时请按顺序依次传递，支持以下几个参数relation/relationmodel/relationforeignkey/relationprimarykey/relationfields/relationmode
 php think crud -t test --relation=category --relation=admin --relationforeignkey=category_id --relationforeignkey=admin_id
+//生成v_phealth_db2数据库下的fa_test表的CRUD
+php think crud -t test --db=v_phealth_db2
 ```
 
 ### 参数介绍
@@ -59,6 +61,7 @@ php think crud -t test --relation=category --relation=admin --relationforeignkey
 -o, --relationmode[=RELATIONMODE]              关联模型,hasone或belongsto [default: "belongsto"]
 -d, --delete[=DELETE]                          删除模式,将删除之前使用CRUD命令生成的相关文件
 -u, --menu[=MENU]                              菜单模式,生成CRUD后将继续一键生成菜单
+--db[=key]                                     多数据库支持(参数为tp5中配置的数据库key 在application\config.php添加数据库配置信息)
 --setcheckboxsuffix[=SETCHECKBOXSUFFIX]    自动生成复选框的字段后缀
 --enumradiosuffix[=ENUMRADIOSUFFIX]        自动生成单选框的字段后缀
 --imagefield[=IMAGEFIELD]                  自动生成图片上传组件的字段后缀
