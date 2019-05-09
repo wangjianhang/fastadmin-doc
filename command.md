@@ -37,7 +37,7 @@ php think crud -t test -r category -k category_id -p id
 //生成fa_test表的CRUD且所有以list或data结尾的字段都生成复选框
 php think crud -t test --setcheckboxsuffix=list --setcheckboxsuffix=data
 //生成fa_test表的CRUD且所有以image和img结尾的字段都生成图片上传组件
-php think crud -t test --imagefield=image --setcheckboxsuffix=img
+php think crud -t test --imagefield=image --imagefield=img
 //关联多个表,参数传递时请按顺序依次传递，支持以下几个参数relation/relationmodel/relationforeignkey/relationprimarykey/relationfields/relationmode
 php think crud -t test --relation=category --relation=admin --relationforeignkey=category_id --relationforeignkey=admin_id
 ```
