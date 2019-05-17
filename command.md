@@ -131,7 +131,7 @@ php think menu -c all-controller
 
 ## 一键压缩打包
 
-在FastAdmin中如果修改了核心的JS或CSS文件，是需要重新压缩打包后在生产环境下才会生效。FastAdmin采用的是基于`RequireJS`的`r.js`进行JS和CSS文件的压缩打包，
+在FastAdmin中如果修改了核心的JS或CSS文件，是需要重新压缩打包后在生产环境下才会生效。FastAdmin采用的是基于`RequireJS`的`r.js`进行JS和CSS文件的压缩打包。
 
 ### 准备工作
 
@@ -163,6 +163,25 @@ Windows系统需要手动配置node的路径,请参考[在Windows下如何压缩
 如果无法进行打包，可以使用`php think min -m all -r all -vvv`尝试下，看下错误信息
 
 如果压缩打包后访问不生效，请检查是否是你的浏览器缓存的原因
+
+请不要直接修改以`.min.js`和`.min.css`结尾的文件，因为一键压缩打包后会进行覆盖
+
+安装或卸载插件后无需进行压缩打包JS和CSS
+
+### 影响文件
+在调试模式和生产环境下所加载的JS和CSS是不一样的，压缩打包会重新生成生成环境下的JS和CSS文件，特别注意下。
+调试模式：
+> public/assets/js/require-frontend.js
+> public/assets/js/require-backend.js
+> public/assets/css/frontend.css
+> public/assets/css/backend.css
+
+生产环境：(打包压缩后会重新生成以下文件)
+> public/assets/js/require-frontend.min.js
+> public/assets/js/require-backend.min.js
+> public/assets/css/frontend.min.css
+> public/assets/css/backend.min.css
+
 
 ### 使用范例
 
