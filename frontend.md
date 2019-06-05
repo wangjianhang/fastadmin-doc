@@ -266,7 +266,7 @@ Table.api.formatter
 Table.api.getrowdata(table, index)
 //初始化表格配置
 Table.api.init(defaults, columnDefaults, locales)
-//表格指量操作的方法
+//表格批量操作的方法
 Table.api.multi
 //替换URL链接中的{变量名}
 Table.api.replaceurl
