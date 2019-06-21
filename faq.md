@@ -121,6 +121,10 @@ FastAdmin的数据库安装文件保存在 [application/admin/command/Install/fa
 1. 添加控制器的属性`$noNeedRight=["*"]`，表示无需再做鉴权
 2. 后台会员规则中添加相应的规则，再给对应的会员组赋予相应的权限即可
 
+## 为什么后台给管理员所在组分配了权限，管理员仍然提示没有权限访问
+
+如果是你自己添加的控制器，可以使用一键生成菜单命令(php think menu -c 控制器名)来生成菜单，如果你是手动添加的规则菜单，权限规则必须细化到控制器的方法才可以。
+
 ## php think install报不是内部或外部命令
 
 这是由于php.exe文件所在目录未加入到PATH环境变量导致的
@@ -346,7 +350,7 @@ FastAdmin建议运行在PHP5.5及以上版本，因此如果提示网络错误�
 
 ## 如何将静态资源采用CDN方式部署到第三方云存储
 
-FastAdmin可以将静态的资源部署到又拍云、七牛云或阿里OSS，可大大的加快网站的访问。
+FastAdmin可以将静态的资源部署到[又拍云](https://www.fastadmin.net/store/upyun.html)、[七牛云](https://www.fastadmin.net/store/qiniu.html)或[阿里OSS](https://www.fastadmin.net/store/alioss.html)，可大大的加快网站的访问。
 默认FastAdmin的静态资源是不采用CDN部署的，如果需要启用，需要修改以下两个文件的配置
 
 1. 修改`application/extra/site.php`中`cdnurl`的值为你CDN的地址
@@ -356,4 +360,4 @@ FastAdmin可以将静态的资源部署到又拍云、七牛云或阿里OSS，�
 
 如果采用了静态资源部署CDN，在后台`插件管理`中对插件执行安装、禁用、启用、卸载后都需要将`public/assets/addons/`目录和`public/assets/js/addons.js`文件再次同步更新到CDN。
 
-如果你需要将上传的文件直传至又拍云、七牛云或阿里OSS，请在插件管理中下载对应第三方云存储的插件并配置好即可。
+如果你需要将上传的文件直传至[又拍云](https://www.fastadmin.net/store/upyun.html)、[七牛云](https://www.fastadmin.net/store/qiniu.html)或[阿里OSS](https://www.fastadmin.net/store/alioss.html)，请在插件管理中下载对应第三方云存储的插件并配置好即可。

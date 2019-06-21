@@ -6,6 +6,7 @@ order: 2
 
 ## **环境要求**
 
+FastAdmin推荐你使用[阿里云](https://www.fastadmin.net/go/aliyun)和[腾讯云](https://www.fastadmin.net/go/tencent)服务器
 ~~~
 PHP >= 5.5.0 (推荐PHP7.1版本)
 Mysql >= 5.5.0 (需支持innodb引擎)

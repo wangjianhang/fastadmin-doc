@@ -32,11 +32,13 @@ FastAdmin支持将文件或图片直传到第三方云存储服务器而不需�
 | 七牛云  | 实名认证后免费10G流量、稳定、图片处理     | [下载](https://www.fastadmin.net/store/qiniu.html)  |
 | 阿里OSS | 阿里系、稳定、图片处理、支持挂载为分区    | [下载](https://www.fastadmin.net/store/alioss.html) |
 | Ucloud  | 每月20G免费流量、图片处理                 | [下载](https://www.fastadmin.net/store/ucloud.html) |
+| 腾讯COS  | 每月50G免费流量、图片处理                 | [下载](https://www.fastadmin.net/store/cos.html) |
 
 在使用第三方云存储功能之前请先注册一个账号并新增一个云储存服务,你可以通过FastAdmin的邀请链接注册，FastAdmin会获得相应平台的CDN流量
-又拍云：https://console.upyun.com/register/?invite=SyAt3ehQZ
-七牛云：https://portal.qiniu.com/signup?code=3l79xtos9w9qq
-阿里云：https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=t50mdbun&utm_source=t50mdbun 
+又拍云：https://www.fastadmin.net/go/upyun
+七牛云：https://www.fastadmin.net/go/qiniu
+阿里云：https://www.fastadmin.net/go/aliyun
+腾讯云：https://www.fastadmin.net/go/tencent
 
 FastAdmin的上传功能非常强大，我们只需要简单的配置即可支持单图或多图上传。
 

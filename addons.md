@@ -182,7 +182,7 @@ version = 1.0.0
 state = 1
 ```
 
-注意这个`name`是插件的唯一标识，不能和现在的插件冲突，其次注意下这个`name`值，如果我们有涉及到数据库，那个表的前缀也必须是`__PREFIX__name`开头。比如我们下面的`__PREFIX__blog_category`。
+注意这个`name`是插件的唯一标识，不能和现在的插件冲突，其次注意下这个`name`值，如果我们有涉及到数据库，那个表的前缀也必须是`__PREFIX__标识名`开头。比如我们下面的`__PREFIX__blog_category`。
 
 `install.sql` 这个文件中只能是SQL语句，同时在此文件中可以使用`__PREFIX__`表示数据库表前缀，FastAdmin在安装导入SQL时自动进行替换。此文件的内容格式为
 
@@ -205,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__blog_category` (
   PRIMARY KEY (`id`),
   KEY `weigh` (`weigh`,`id`),
   KEY `pid` (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='博客分类表';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='博客分类表';
 ; 在执行插入时最好加上BEGIN;和COMMIT;
 BEGIN;
 INSERT INTO `__PREFIX__blog_category` VALUES ('1', '0', '默认分类', 'default', '', '/assets/img/qrcode.png', '', '', '', '1502112587', '1502112587', '0', 'normal');
